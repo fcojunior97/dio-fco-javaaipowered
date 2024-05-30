@@ -22,10 +22,11 @@ public class UserController {
     }
 
     @PostMapping
-    @ResponseStatus(HttpStatus.CREATED)
-    public ResponseEntity<User> createUser(User user) {
+    public ResponseEntity<User> createUser(@RequestBody User user) {
         User userCreate = userService.create(user);
 
-        return ResponseEntity.ok(userCreate);
+        return ResponseEntity
+                .status(HttpStatus.CREATED)
+                .body(userCreate);
     }
 }

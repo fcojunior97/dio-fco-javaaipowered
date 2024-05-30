@@ -1,0 +1,1 @@
+web: java -jar target/dio-fco-javapowered-0.0.1-SNAPSHOT.jar

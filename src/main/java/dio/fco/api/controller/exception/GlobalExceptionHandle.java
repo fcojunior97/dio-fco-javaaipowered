@@ -21,8 +21,8 @@ public class GlobalExceptionHandle {
     }
 
     @ExceptionHandler(Throwable.class)
-    public ResponseEntity<String> handleNotFoundException(Throwable ex) {
-        return new ResponseEntity<>("Unexpected server error", HttpStatus.NOT_FOUND);
+    public ResponseEntity<String> handleUnexpectedException(Throwable ex) {
+        return new ResponseEntity<>("Unexpected server error", HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
 
