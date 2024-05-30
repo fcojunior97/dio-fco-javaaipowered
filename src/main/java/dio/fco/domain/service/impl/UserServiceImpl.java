@@ -16,6 +16,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User findByID(Long id) {
+        System.out.println(id);
         return userRepository.findById(id).orElseThrow(() -> new NoSuchElementException());
     }
 
